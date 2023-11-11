@@ -1,0 +1,111 @@
+1.clone this repository from git
+2.You get this folder Travel-Itinerary-Management-System
+3.Go to Travel-Itinerary-Management-System folder ,open cmd  and write    npm install   
+
+4.Go to Travel-Itinerary-Management-System folder ,open cmd  and write   npm start    then the node server open
+
+5.open postman to check api
+
+6.createuser     post method    localhost:5000/api/createuser
+   
+Body Raw json data for createuser
+
+{
+
+    "name":"Ragib Hasan",
+    "email":"ragibhasan006@gmail.com",
+    "password":"0177"
+
+}
+    
+7.login user  post method     localhost:5000/api/loginuser
+
+Body Raw json data for loginuser
+
+{
+
+ "email":"ragibhasan006@gmail.com",
+ "password":"0177"
+
+}
+
+
+
+
+
+8.createitinerary
+this route access need to token 
+method post        localhost:5000/api/createitinerary
+
+go postman header
+Key                value
+Content-Type       application/json
+Authorization      Bearer give here token  when you hit createuser or loginuser route you get token
+
+Body Raw json data for createitinerary
+                      
+  {
+   "name":"Akash Ahmed",
+   "date":"20-09-2023",
+   "destination":"Teacher",
+   "activities":"4 activities",
+   "transportationdetails":"alltime car",
+   "accommodationdetails":"abdd",
+   "userid":"654f1a371877f84b566552bc"      when you    createuser or loginuser        then you get a userid give the userid here    
+
+ }
+
+
+9.updateitinerary
+method put          localhost:5000/api/updateitinerary/:id
+  
+
+go postman header
+Key                value
+Content-Type       application/json
+Authorization      Bearer give here token  when you hit createuser or loginuser route you get token
+
+Body Raw json data for updateitinerary
+                      
+  {
+   "name":"Ragib Ahmed",
+   "date":"20-09-2023",
+   "destination":"Developer",
+   "activities":"9 activities",
+   "transportationdetails":"alltime car",
+   "accommodationdetails":"abdd",
+   "userid":"654f1a371877f84b566552bc"      when you    createuser or loginuser        then you get a userid give the userid here    
+
+ }
+
+
+
+
+10.DeleteItinerary
+method delete      localhost:5000/api/deleteitinerary/:id
+
+go postman header
+Key                value
+Content-Type       application/json
+Authorization      Bearer give here token  when you hit createuser or loginuser route you get token
+
+
+
+
+11.specficItinerary
+method get         localhost:5000/api/specficItinerary/:id
+
+go postman header
+Key                value
+Content-Type       application/json
+Authorization      Bearer give here token  when you hit createuser or loginuser route you get token
+
+
+
+
+12.listofitineraryuser
+method get         localhost:5000/api/listofitineraryuser
+go postman header
+Key                value
+Content-Type       application/json
+Authorization      Bearer give here token  when you hit createuser or loginuser route you get token
